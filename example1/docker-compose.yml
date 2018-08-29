@@ -2,8 +2,7 @@ version: '3'
 services:
   db:
     build: ./mysql
-    env_file:
-      - ./mysql/config/.env
+    env_file: ./mysql/.env
     environment:
       TZ: "Asia/Tokyo"
     volumes:
