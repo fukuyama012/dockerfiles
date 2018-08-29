@@ -6,4 +6,4 @@ RUN apt-get install -y vim
 RUN useradd mysql_user
 USER mysql_user
 # add custom.cnf
-COPY config /etc/mysql/conf.d
+COPY config/*.cnf /etc/mysql/conf.d
