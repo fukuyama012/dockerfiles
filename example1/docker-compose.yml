@@ -1,0 +1,15 @@
+version: '3'
+services:
+  db:
+    build: ./mysql
+    env_file:
+      - ./mysql/config/.env
+    environment:
+      TZ: "Asia/Tokyo"
+    volumes:
+      - ./mysql/data/:/var/lib/mysql
+      - ./mysql/logs/:/var/log/mysql
+#      - ./mysql/init/:/docker-entrypoint-initdb.d
+    ports:
+      - "3306:3306"
+
