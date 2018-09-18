@@ -28,6 +28,7 @@ docker-compose up -d
 - JSTタイムゾーン
 - Rails new API mode
 - DBは追加ユーザーで操作
+- RSpec, factory_bot導入
 
 ### Example2 Usage
 ```sh
