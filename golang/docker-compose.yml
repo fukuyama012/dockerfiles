@@ -1,0 +1,34 @@
+version: '3.7'
+services:
+  app:
+    build: ./myapp
+    ports:
+    - "80:8080"
+    links:
+    - db
+    environment:
+      TZ: "Asia/Tokyo"
+
+  app_dev:
+    build:
+      context: ./myapp
+      target: build_env
+    tty: true
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./myapp/src:/go/src/
+    environment:
+      TZ: Asia/Tokyo
+
+  db:
+    build: ./mysql
+    env_file: ./config/mysql/.env
+    environment:
+      TZ: "Asia/Tokyo"
+    volumes:
+      - ./mysql/data/:/var/lib/mysql
+      - ./mysql/logs/:/var/log/mysql
+      - ./mysql/init/:/docker-entrypoint-initdb.d
+    ports:
+      - "3306:3306"
