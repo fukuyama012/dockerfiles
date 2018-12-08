@@ -3,7 +3,7 @@ services:
   app_dev:
     build:
       context: ./myapp
-    tty: true
+    command: revel run -a web
     ports:
       - "9000:9000"
     links:
