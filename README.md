@@ -60,3 +60,8 @@ cd golang-revel
 ```sh
 bash make_base.sh
 ```
+
+Revel起動
+```sh
+docker-compose up
+```
