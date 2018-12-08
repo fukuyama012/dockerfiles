@@ -18,7 +18,7 @@ Dockerの設定ファイル置き場
 
 ### Example1 Usage
 ```sh
-cd example1  
+cd mysql  
 docker-compose up -d
 ```
  
@@ -32,7 +32,7 @@ docker-compose up -d
 
 ### Example2 Usage
 ```sh
-cd example2  
+cd rails  
 ```
 各コンテナ, Rails初期化  
 ```sh
@@ -47,3 +47,16 @@ bash up_service.sh
  golang, MySQL コンテナ
 - データ永続化 (ホスト共有)
 - JSTタイムゾーン
+
+## Example4 golang, Revelフレームワーク 
+
+### Example4 Usage
+```sh
+cd golang-revel  
+```
+
+（初回のみ実行）  
+　Revel開発環境のセットアップ
+```sh
+bash make_base.sh
+```
