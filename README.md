@@ -9,7 +9,7 @@ Dockerの設定ファイル置き場
 - macOS High Sierra
 - Docker for Mac (18.06.1-ce)
 
-## Example1 Contents
+## Example1 MySQL 
 以下設定を追加したMySQL5.7 コンテナ
 - データ永続化 (ホスト共有)
 - JSTタイムゾーン
@@ -22,7 +22,7 @@ cd example1
 docker-compose up -d
 ```
  
-## Example2 Contents
+## Example2 Rails
  Ruby on Rails, MySQL コンテナ
 - データ永続化 (ホスト共有)
 - JSTタイムゾーン
@@ -42,3 +42,8 @@ bash init_container.sh
 ```sh
 bash up_service.sh
 ```
+
+## Example3 golang
+ golang, MySQL コンテナ
+- データ永続化 (ホスト共有)
+- JSTタイムゾーン
